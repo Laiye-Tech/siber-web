@@ -1,0 +1,52 @@
+.container {
+  width: 100%;
+}
+
+.item {
+  z-index: 11;
+  margin-top: 8px;
+}
+
+.inner {
+  border-radius: 4px;
+  background-color: #f5f7f7;
+  color: #333;
+  font-size: 14px;
+  padding: 8px;
+  cursor: pointer;
+
+  :global {
+    .anticon-delete {
+      float: right;
+      cursor: pointer;
+      line-height: inherit;
+    }
+
+    .anticon-delete:hover {
+      color: #1f77f3;
+    }
+  }
+}
+
+.inner:hover {
+  box-shadow: 0 2px 6px 0 rgba(66, 91, 109, 0.2);
+
+  .handle {
+    background-image: url('@/asset/invalid-hover.png');
+  }
+}
+
+.handle {
+  height: 100%;
+  margin-right: 16px;
+  padding: 10px 4px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('@/asset/invalid.png');
+}
+
+.helper {
+  box-shadow: 0 2px 6px 0 rgba(66, 91, 109, 0.4);
+  cursor: row-resize;
+  border-radius: 4px;
+}

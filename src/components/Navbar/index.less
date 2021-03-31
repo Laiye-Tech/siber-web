@@ -1,0 +1,41 @@
+@nav-width: 256px;
+@nav-collapsed-width: 80px;
+
+.nav {
+  position: relative;
+  z-index: 3;
+  height: 100%;
+  width: @nav-width;
+  background: #001529;
+  color: #fff;
+  box-shadow: 2px 0 6px rgba(0, 21, 41, 0.35);
+
+  &:global(.t-collapsed) {
+    width: @nav-collapsed-width;
+  }
+
+  &Logo {
+    position: relative;
+    height: 64px;
+    padding-left: 24px;
+    overflow: hidden;
+    line-height: 64px;
+    transition: all 0.3s;
+
+    img {
+      display: inline-block;
+      height: 32px;
+      vertical-align: middle;
+    }
+
+    h1 {
+      display: inline-block;
+      margin: 0 0 0 12px;
+      color: #fff;
+      font-weight: 500;
+      font-size: 20px;
+      vertical-align: middle;
+      margin-left: 24px;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+.container {
+  dl {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .queryInfo {
+    align-items: flex-start
+  }
+
+  .queryInfoContainer {
+    width: 100%;
+  }
+
+  dt {
+    min-width: 140px;
+  }
+
+  dd {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .btn {
+    margin-left: 8%;
+    margin-bottom: 20px;
+  }
+
+  .analysisBtn {
+    margin-left: 30px;
+  }
+
+  .marked {
+    border: 1px #ccc solid;
+    width: 100%;
+    height: 150px;
+    border-radius: 4px;
+    overflow-y: auto;
+  }
+
+  :global {
+    .ant-card:nth-child(1) {
+      margin: 20px 0 10px 0;
+    }
+  }
+
+  .hidden {
+    display: none;
+  }
+}

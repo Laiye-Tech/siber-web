@@ -1,0 +1,152 @@
+.container {
+  .basic {
+    dl {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    dt {
+      min-width: 110px;
+    }
+
+    dd {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    dl:last-child {
+      justify-content: flex-end;
+    }
+  }
+
+  .caseDl {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .caseSettingBtn {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+
+    :global {
+      .ant-btn {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .iconButton {
+    padding-left: 10px;
+  }
+
+  .caseDt {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 40px;
+    color: rgb(104, 124, 138);
+    background: rgb(245, 247, 247);
+    font-size: 16px;
+    font-weight: 500;
+    width: calc(100% - 24px);
+
+    dt {
+      width: 50%;
+      line-height: 40px;
+      padding-left: 16px;
+      border: 1px #ccc solid;
+    }
+
+    dt:nth-child(2) {
+      border-left: none;
+    }
+
+    dt:nth-child(3) {
+      border-left: none;
+    }
+  }
+
+  .caseDd {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    dd {
+      width: 50%;
+      border: 1px #ccc solid;
+      padding: 10px 5px;
+      border-top: none;
+      display: flex;
+    }
+
+    dd:nth-child(2) {
+      border-left: none;
+    }
+
+    dd:nth-child(3) {
+      border-left: none;
+    }
+  }
+
+  .output {
+    :global {
+      .ant-btn {
+        margin: 0 auto;
+        width: 70%;
+      }
+    }
+  }
+
+  h5 {
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(66, 91, 109);
+    margin-top: 20px;
+  }
+
+  h5:first-child {
+    margin-top: 0px;
+  }
+
+  .outputCard {
+    margin-top: 20px;
+  }
+
+  :global {
+    .ant-btn {
+      margin-left: 8.2%;
+    }
+
+    .ant-input {
+      width: 100%;
+    }
+
+    .ant-card {
+      min-height: 210px;
+      border-radius: 8px;
+      margin: 0 20px 20px 0;
+    }
+
+    .ant-select {
+      width: 100%;
+    }
+
+    .ant-row-flex {
+      padding-top: 20px;
+    }
+  }
+}
+
+.runModal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.runModal h5 {
+  width: 110px;
+  margin: 0;
+}

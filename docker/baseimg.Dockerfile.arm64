@@ -1,0 +1,8 @@
+# registry-vpc.cn-beijing.aliyuncs.com/laiye-devops/file-analyze:baseimg-arm64
+FROM snowcrumble/node:10.15.1-alpine-arm64v8
+
+COPY ./package.json /apps
+COPY ./yarn.lock /apps
+
+RUN sed -i 's/npm.laiye.com/npm-arm.wul.ai/g' /apps/yarn.lock \
+    && NODE_ENV='development' yarn

@@ -1,0 +1,56 @@
+@nav-width: 256px;
+@nav-collapsed-width: 80px;
+@title-height: 64px;
+
+.container {
+  height: 100%;
+  overflow-y: hidden;
+  position: relative;
+  min-width: 1020px;
+}
+
+.wrapper {
+  position: absolute;
+  left: @nav-width;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  transition: left 0.3s;
+
+  &:global(.t-collapsed) {
+    left: @nav-collapsed-width;
+  }
+}
+
+.header {
+  position: relative;
+  z-index: 2;
+  height: @title-height;
+  line-height: @title-height;
+  padding-left: 32px;
+  font-size: 18px;
+  font-weight: 600;
+  box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
+
+  &Icon {
+    margin-right: 8px;
+  }
+}
+
+.body {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: @title-height;
+  background: #f0f2f5;
+  padding: 16px 32px 32px 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  margin-top: 16px;
+  flex: 1;
+  overflow: auto;
+}

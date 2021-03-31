@@ -1,0 +1,20 @@
+{
+  "apps": [
+    {
+      "name": "siber-web",
+      "script": "./server/index.js",
+      "max_memory_restart": "500M",
+      "log_file": false,
+      "min_uptime": "86400000",
+      "max_restarts": 10,
+      "cron_restart": "0 1 * * 6",
+      "watch": false,
+      "restart_delay": 3000,
+      "instances": 2,
+      "exec_mode": "cluster",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    }
+  ]
+}

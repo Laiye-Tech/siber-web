@@ -1,0 +1,91 @@
+.container {
+  dl {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  dt {
+    min-width: 110px;
+  }
+
+  dd {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0;
+  }
+
+  .btn {
+    margin-left: 8%;
+  }
+
+  :global {
+    .ant-select {
+      width: 100%;
+    }
+
+    .ant-tag {
+      margin-bottom: 8px;
+    }
+
+    .ant-transfer-list {
+      flex: 1;
+      height: 350px;
+    }
+
+    .ant-transfer-operation {
+      overflow: visible;
+    }
+
+    .ant-transfer {
+      display: flex;
+      align-items: center;
+    }
+
+    .ant-cascader-picker {
+      width: 100%
+    }
+
+    .ant-card {
+      border-radius: 8px;
+    }
+
+    .ant-card:nth-child(1) {
+      margin: 20px 0 10px 0;
+    }
+
+    .run-setting {
+      display: flex;
+      margin: 12px 0;
+
+      & span {
+        font-weight: normal;
+      }
+
+      & dt {
+        margin-right: 4%;
+      }
+
+      & .run-env {
+        width: 15%
+      }
+
+      & .run-time {
+        width: 20%
+      }
+
+      & .run-service {
+        width: 35%
+      }
+
+      & .run-setting-edit {
+        margin-right: 24px
+      }
+    }
+
+    .run-service-span {
+      margin-right: 15px
+    }
+  }
+}

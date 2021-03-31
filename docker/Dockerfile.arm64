@@ -1,0 +1,24 @@
+FROM registry.cn-beijing.aliyuncs.com/laiye-devops/siber-web:baseimg as builder
+
+COPY ./package.json /apps/
+COPY ./yarn.lock /apps/
+
+RUN sed -i 's/npm.laiye.com/npm-arm.wul.ai/g' /apps/yarn.lock \
+    && NODE_ENV='development' yarn
+
+COPY . /apps
+RUN NODE_ENV='development' yarn && npm run build
+
+FROM registry.cn-beijing.aliyuncs.com/laiye-devops/siber-web:baseimg-arm64
+
+COPY ./docker/start.sh /start.sh
+COPY ./package.json /apps
+COPY ./pm2.json /apps
+COPY ./config /apps/config
+COPY ./server /apps/server
+
+COPY --from=builder /apps/dist /apps/dist
+
+RUN chmod +x /start.sh && NODE_ENV='development'; yarn
+
+CMD ["/start.sh"]

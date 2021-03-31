@@ -1,0 +1,63 @@
+.container {
+  :global {
+    .ant-select {
+      width: 100%;
+    }
+
+    .ant-card {
+      border-radius: 8px;
+    }
+
+    .ant-card:nth-child(2) {
+      margin-top: 20px;
+    }
+  }
+
+  dl {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  dt {
+    min-width: 100px;
+  }
+
+  dd {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 0
+  }
+
+  .row {
+    margin-top: 24px;
+  }
+
+  .btn {
+    margin-left: 2%;
+  }
+
+  .caseSetting {
+    margin-bottom: 20px
+  }
+
+  .caseSetting p {
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+
+  .SortableList {
+    .sortSpan {
+      display: inline-block;
+      width: calc(100% - 40px);
+    }
+
+    :global {
+      .ant-card-body {
+        height: 585px;
+        overflow: scroll;
+      }
+    }
+  }
+}

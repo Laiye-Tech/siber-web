@@ -1,0 +1,73 @@
+{
+  "name": "siber-web",
+  "private": true,
+  "scripts": {
+    "analyze": "ANALYZE=1 umi build",
+    "dev": "umi dev",
+    "build": "HTML=none umi build",
+    "start": "parcel index.html",
+    "test": "umi test",
+    "lint": "tslint \"src/**/*.ts\" \"src/**/*.tsx\"",
+    "precommit": "lint-staged",
+    "pm2": "pm2 start --no-daemon pm2.json"
+  },
+  "dependencies": {
+    "aws-sdk": "2.717.0",
+    "express": "4.17.1",
+    "mime-types": "2.1.27",
+    "multer": "1.4.2",
+    "tmp-history": "4.7.0",
+    "uuid": "8.2.0"
+  },
+  "devDependencies": {
+    "@ant-design/icons": "^4.1.0",
+    "@antv/g6": "3.4.4",
+    "@types/jest": "^23.3.12",
+    "@types/marked": "0.6.5",
+    "@types/react": "16.9.34",
+    "@types/react-dom": "16.9.6",
+    "@types/react-test-renderer": "^16.0.3",
+    "@typescript-eslint/eslint-plugin": "^2.6.0",
+    "@typescript-eslint/parser": "^2.6.0",
+    "antd": "4.3.3",
+    "array-move": "2.1.0",
+    "axios": "0.19.0",
+    "copy-to-clipboard": "3.3.1",
+    "echarts": "4.5.0",
+    "eslint": "^6.6.0",
+    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-react-hooks": "2.2.0",
+    "fs": "0.0.1-security",
+    "husky": "^0.14.3",
+    "insert-css": "2.0.0",
+    "jsoneditor": "^7.1.0",
+    "lint-staged": "^7.2.2",
+    "marked": "0.7.0",
+    "moment": "2.24.0",
+    "monaco-editor": "0.21.2",
+    "monaco-editor-webpack-plugin": "2.1.0",
+    "parcel-bundler": "1.12.4",
+    "react": "16.13.1",
+    "react-dnd": "9.4.0",
+    "react-dom": "16.13.1",
+    "react-monaco-editor": "0.41.2",
+    "react-sortable-hoc": "1.10.1",
+    "react-test-renderer": "^16.7.0",
+    "tslint": "^5.12.0",
+    "tslint-eslint-rules": "^5.4.0",
+    "tslint-react": "^3.6.0",
+    "umi": "^2.9.0",
+    "umi-plugin-react": "^1.8.0",
+    "umi-types": "^0.3.0",
+    "webpack-chain": "6.3.0"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "tslint --fix",
+      "git add"
+    ]
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  }
+}

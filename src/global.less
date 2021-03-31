@@ -1,0 +1,85 @@
+@import '~antd/es/style/themes/default.less';
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+.colorWeak {
+  filter: invert(80%);
+}
+
+.ant-layout {
+  min-height: 100vh;
+}
+
+.ant-btn {
+  line-height: 1;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.ant-input-search {
+  z-index: 1;
+}
+
+.ant-input {
+  z-index: 1;
+}
+
+.ant-select {
+  z-index: 1;
+}
+
+.ant-btn-primary {
+  background-color: #1f77f3;
+}
+
+.ant-btn-primary:hover {
+  background-color: #40a9ff;
+}
+
+.ant-pro-grid-content {
+  overflow: hidden;
+}
+
+canvas {
+  display: block;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+.ant-table {
+  width: 100%;
+  overflow-x: auto;
+
+  &-thead>tr,
+  &-tbody>tr {
+
+    >th,
+    >td {
+      white-space: pre;
+
+      >div>span {
+        display: inline-block;
+        margin-right: 24px;
+        color: #1f77f3;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.ant-layout-footer {
+  display: none;
+}
